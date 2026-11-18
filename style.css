@@ -184,16 +184,6 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
-    .hero {
-        height: 60vh;
-    }
-
-    .card-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (min-width: 600px) {
     .nav {
         display: flex;
@@ -204,12 +194,27 @@ footer {
     }
 
     .board {
-        grid-template-columns: repeat(2, 1fr) repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media (min-width: 1024px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 .card.hot .badge { background: crimson; color: #fff; }
 .toolbar { display: flex; align-items: center; gap: 12px; color: #fff; }
+
+.like { border: none; background: none; font-size: 1.4rem; color: #bbb; cursor: pointer;}
+.like.liked { color: crimson; }
+
+.state-empty { display: none; color: #fff; }
+.board.is-empty + .state-empty { display:block; }
