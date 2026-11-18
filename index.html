@@ -38,17 +38,18 @@
         <section id="mine">
             <h2>내 인생 영화 5편</h2>
             <div class="toolbar"> 
-            <p id="count"></p> 
-            <label for="sort">정렬</label> 
-            <select id="sort" onchange="applySort()"> 
-            <option value="rating">평점순</option> 
-            <option value="year">최신 개봉순</option> 
-            <option value="title">제목순</option> 
-        </select> 
-</div> 
-            <div class="board" id=""board>
-
-            </div>
+                <input id="q" type="search" placeholder="영화 제목 검색">
+                <p id="count"></p> 
+                <p>찜 <span id="likeCount">0</span>편</p>
+                <label for="sort">정렬</label> 
+                <select id="sort"> 
+                    <option value="rating">평점순</option> 
+                    <option value="year">최신 개봉순</option> 
+                    <option value="title">제목순</option> 
+                </select> 
+            </div> 
+            <div class="board" id=""board> </div>
+            <p class="state-empty">조건에 맞는 영화가없습니다.</p>
         </section>
 
         <section id="boxoffice">
@@ -131,5 +132,4 @@
         <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS), 기준일 2026-10-26</p>
     </footer>
 </body>
-
 </html>
